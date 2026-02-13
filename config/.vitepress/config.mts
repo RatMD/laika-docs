@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     base: '/',
-    srcDir: "docs",
+    srcDir: "../docs",
     title: "LAIKA",
     description: "A Vue/Vite OctoberCMS Bridge.",
     lastUpdated: true,

@@ -27,6 +27,6 @@ _ide_helper_models.php
 # Misc
 .env
 testbench.yaml
-/.vitepress/cache
-/.vitepress/dist
+.vitepress/cache
+.vitepress/dist
 /coverage
