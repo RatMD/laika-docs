@@ -11,57 +11,78 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Guide', link: '/guide/getting-started', activeMatch: '/guide' },
-            { text: 'Reference', link: '/reference/overview', activeMatch: '/reference' },
+            { text: 'Backend', link: '/backend/getting-started', activeMatch: '/backend' },
+            { text: 'Frontend', link: '/frontend/overview', activeMatch: '/frontend' },
         ],
         sidebar: {
-            '/guide': [
+            '/backend': [
                 {
                     text: 'Getting Started', 
-                    link: '/guide/getting-started',
+                    link: '/backend/getting-started',
                 },
                 {
-                    text: 'Configuration', 
-                    link: '/guide/configuration',
-                },
-                {
-                    text: 'Differences',
+                    text: 'Templating',
                     items: [
-                        { text: 'Templating', link: '/guide/templating/structure' },
-                        { text: 'Layouts', link: '/guide/templating/layouts' },
-                        { text: 'Pages', link: '/guide/templating/pages' },
-                        { text: 'Partials', link: '/guide/templating/partials' },
-                        { text: 'Content Blocks', link: '/guide/templating/content-blocks' },
-                        { text: 'Components', link: '/guide/templating/components' },
-                        { text: 'Snippets', link: '/guide/templating/snippets' },
-                    ]
+                        { text: 'Themes', link: '/backend/templating/themes' },
+                        { text: 'Layouts', link: '/backend/templating/layouts' },
+                        { text: 'Pages', link: '/backend/templating/pages' },
+                        { text: 'Partials', link: '/backend/templating/partials' },
+                        { text: 'Content Blocks', link: '/backend/templating/content-blocks' },
+                        { text: 'Components', link: '/backend/templating/components' },
+                        { text: 'Snippets', link: '/backend/templating/snippets' },
+                    ],
+                    collapsed: true
+                },
+                {
+                    text: 'Components',
+                    items: [
+                        { text: '[section]', link: '/backend/components/section' },
+                        { text: '[collection]', link: '/backend/components/collection' },
+                        { text: '[global]', link: '/backend/components/global' },
+                        { text: '[resources]', link: '/backend/components/resources' },
+                        { text: '[sitePicker]', link: '/backend/components/site-picker' },
+                    ],
+                    collapsed: true
                 },
             ],
-            '/reference': [
+            '/frontend': [
                 {
-                    text: "Reference",
+                    text: "Frontend",
                     items: [
-                        { text: "Overview", link: "/reference/overview" },
+                        { text: "Overview", link: "/frontend/overview" },
+                        { text: "Getting Started", link: "/frontend/getting-started" },
                     ]
                 },
                 {
                     text: 'Components',
                     items: [
-                        { text: '&lt;Head /&gt;', link: '/reference/components/head' },
-                        { text: '&lt;PageComponent /&gt;', link: '/reference/components/page-component' },
-                        { text: '&lt;PageContent /&gt;', link: '/reference/components/page-content' },
-                        { text: '&lt;ProgressBar /&gt;', link: '/reference/components/progress-bar' },
-                    ]
+                        { text: '&lt;Flash /&gt;', link: '/frontend/components/flash' },
+                        { text: '&lt;Head /&gt;', link: '/frontend/components/head' },
+                        { text: '&lt;Link /&gt;', link: '/frontend/components/link' },
+                        { text: '&lt;OctoberFilter /&gt;', link: '/frontend/components/october-filter' },
+                        { text: '&lt;PageComponent /&gt;', link: '/frontend/components/page-component' },
+                        { text: '&lt;PageContent /&gt;', link: '/frontend/components/page-content' },
+                        { text: '&lt;ProgressBar /&gt;', link: '/frontend/components/progress-bar' },
+                        { text: '&lt;ServerPartial /&gt;', link: '/frontend/components/server-partial' },
+                    ],
+                    collapsed: true
                 },
                 {
                     text: 'Runtime API',
                     items: [
-                        { text: '$components | useComponent', link: '/reference/runtime/component' },
-                        { text: '$laika | useLaika', link: '/reference/runtime/laika' },
-                        { text: '$october | useOctober', link: '/reference/runtime/october' },
-                        { text: '$payload | usePayload', link: '/reference/runtime/payload' },
-                        { text: '$router | useRouter', link: '/reference/runtime/router' },
-                    ]
+                        { text: '$laika | useLaika', link: '/frontend/runtime/laika' },
+                        { text: '$router | useRouter', link: '/frontend/runtime/router' },
+                        { text: '$payload | usePayload', link: '/frontend/runtime/payload' },
+                        { text: '$site | useSite', link: '/frontend/runtime/site' },
+                        { text: '$theme | useTheme', link: '/frontend/runtime/theme' },
+                        { text: '$page | usePage', link: '/frontend/runtime/page' },
+                        { text: '$components | useComponent', link: '/frontend/runtime/component' },
+                        { text: '$october | useOctober', link: '/frontend/runtime/october' },
+                        { text: '$shared | useShared', link: '/frontend/runtime/shared' },
+                        { text: 'useOctoberFilter', link: '/frontend/runtime/october-filter' },
+                        { text: 'getProgressBar', link: '/frontend/runtime/progress-bar' },
+                    ],
+                    collapsed: true
                 },
             ],
         },
