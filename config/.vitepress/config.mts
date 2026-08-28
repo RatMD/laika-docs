@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
     base: '/',
     srcDir: "../docs",
+    outDir: '../public',
     title: "LAIKA",
     description: "A Vue/Vite OctoberCMS Bridge.",
     lastUpdated: true,

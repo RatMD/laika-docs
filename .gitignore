@@ -30,3 +30,4 @@ testbench.yaml
 /config/.vitepress/cache
 /config/.vitepress/dist
 /coverage
+/public
